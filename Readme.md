@@ -35,6 +35,6 @@ ToFix:
 
 ```ruby
 match?(xyz)
-    ^^
-    this is recognized as a numeric constant
+     ^^
+     this is recognized as a numeric constant
 ```
