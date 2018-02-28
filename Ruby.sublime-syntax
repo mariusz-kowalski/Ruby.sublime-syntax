@@ -118,9 +118,9 @@ contexts:
 
   class:
     # Defining a class method
-    - match: \b(class)\b(?=\s*<)
+    - match: \b(class[^:])\b(?=\s*<)
       scope: keyword.control.class.ruby
-    - match: '\b(class)\b'
+    - match: '\b(class[^:])\b'
       scope: meta.class.ruby keyword.control.class.ruby
       push: class-declaration
 
@@ -209,7 +209,7 @@ contexts:
     - match: ":'"
       scope: punctuation.definition.constant.ruby
       push:
-        - meta_scope: constant.other.symbol.single-quoted.ruby
+        - meta_scope: constant.other.symbol.single-quoted.ruby.18syntax
         - match: "'"
           scope: punctuation.definition.constant.ruby
           pop: true
@@ -218,7 +218,7 @@ contexts:
     - match: ':"'
       scope: punctuation.definition.constant.ruby
       push:
-        - meta_scope: constant.other.symbol.double-quoted.ruby
+        - meta_scope: constant.other.symbol.double-quoted.ruby.18syntax
         - match: '"'
           scope: punctuation.definition.constant.ruby
           pop: true
@@ -242,7 +242,7 @@ contexts:
             @@?{{identifier}}
           )
         )
-      scope: constant.other.symbol.ruby
+      scope: constant.other.symbol.ruby.18syntax
       captures:
         1: punctuation.definition.constant.ruby
     # matches questionmark-letters.
