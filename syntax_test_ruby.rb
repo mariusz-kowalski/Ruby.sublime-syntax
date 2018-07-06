@@ -453,7 +453,7 @@ p huh?("H", 1) + huh?("u") + huh?("gs")
 :"double quoted symbol with #{'interpolation'.upcase}"
 
 hash_19notation = { simple_symbol: 1 }
-hash_19notation = { 'singlequotedsymbol': 1 }
+hash_19notation = { 'singlequotedsymbol': 1, aaa: '1', 'bbb': 1 }
 hash_19notation = { 'single quoted symbol #↑1': 1 }
 hash_19notation = { 'single \'quoted\' symbol': 1 }
 #                           ^^      ^^
@@ -461,7 +461,7 @@ hash_19notation = { 'single \'quoted\' symbol': 1 }
 
 hash_19notation = { "doublequotedsymbol": 1 }
 hash_19notation = { "double quoted symbol #↑1": 1 }
-hash_19notation = { "double\"quoted\":_symbol": 1, "a": 2 }
+hash_19notation = { "double\"quoted\":_symbol": 1, aaa: "x", "bbb": 2 }
 #                          ^^      ^^
 #                          escaped chars
 hash_19notation = { "double quoted symbol with #{'interpolation'.upcase}": 1 }

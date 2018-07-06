@@ -201,7 +201,7 @@ contexts:
         1: punctuation.definition.constant.ruby
       push: try-regex
     # Ruby 1.9 quoted symbols
-    - match: '(").*?[^\\](":)(?!:)'
+    - match: '(")[^"]*[^\\](":)(?!:)'
       scope: constant.other.symbol.ruby
       # - push:
       #   - include: interpolated-ruby
@@ -209,7 +209,7 @@ contexts:
       captures:
         1: punctuation.definition.constant.ruby
         2: punctuation.definition.constant.ruby
-    - match: "(').*?[^\\\\](':)(?!:)"
+    - match: "(')[^']*[^\\\\](':)(?!:)"
       scope: constant.other.symbol.ruby
       #   - include: escaped-char
       captures:
