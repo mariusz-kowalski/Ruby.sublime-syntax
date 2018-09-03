@@ -466,3 +466,16 @@ hash_19notation = { "double\"quoted\":_symbol": 1, aaa: "x", "bbb": 2 }
 #                          escaped chars
 hash_19notation = { "double quoted symbol with #{'interpolation'.upcase}": 1 }
 #                                              ^^^^^^^^^^^^^^^^^^^^^^^^^ interpolated ruby
+
+##################
+# Others
+##################
+
+def sd= d
+#     ^
+#     entity.name.function.ruby
+end
+
+variable= 5
+#       ^
+#       keyword.operator.assignment.ruby

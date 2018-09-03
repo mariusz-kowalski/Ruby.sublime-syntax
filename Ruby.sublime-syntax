@@ -77,7 +77,8 @@ first_line_match: ^#!\s*/.*\bj?ruby\b
 scope: source.ruby
 variables:
   identifier: '\b[[:alpha:]_][[:alnum:]_]*\b'
-  method_punctuation: '(?:[?!]|=(?![>=]))?'
+  # method_punctuation: '(?:[?!]|=(?![>=]))?'
+  method_punctuation: '(?:[?!])?'
   method_name: '{{identifier}}{{method_punctuation}}'
   path_lookahead: '(::)?({{identifier}}(\.|::))*{{identifier}}'
 
